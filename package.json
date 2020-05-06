@@ -7,10 +7,12 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "eslint . --ext js",
     "format": "npm-run-all format:*",
-    "format:prettier": "prettier --config=index.js --write *",
-    "format:eslint": "eslint . --ext js --fix"
+    "format:eslint": "eslint --ignore-path .gitignore . --ext js --fix",
+    "format:prettier": "prettier --ignore-path .gitignore --config=index.js --write *",
+    "lint": "npm-run-all lint:*",
+    "lint:eslint": "eslint --ignore-path .gitignore . --ext js",
+    "lint:prettier": "prettier --ignore-path .gitignore --check *"
   },
   "husky": {
     "hooks": {
