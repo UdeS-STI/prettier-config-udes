@@ -7,6 +7,7 @@ Prettier shareable config for the UdeS style guide. It can be used to format aut
 
 - css
 - html
+- js
 - json
 - md
 - php
@@ -27,10 +28,17 @@ Edit `package.json`:
 {
   "prettier": "prettier-config-udes",
   "scripts": {
-    "format:prettier": "prettier --ignore-path .gitignore --write *",
-    "lint:prettier": "prettier --ignore-path .gitignore --check *"
+    "format:prettier": "prettier --ignore-path .gitignore --write **/*.{css,html,js,json,md,php,scss,yaml,yml}",
+    "lint:prettier": "prettier --ignore-path .gitignore --check **/*.{css,html,js,json,md,php,scss,yaml,yml}"
   }
 }
+```
+
+If you don't have all these extensions files, you should adjust the extension list for you project.
+Else, Prettier will output an error:
+
+```
+[error] No files matching the pattern were found: "**/*.css".
 ```
 
 ## Publish
