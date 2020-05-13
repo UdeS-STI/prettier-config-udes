@@ -1,7 +1,7 @@
 # prettier-config-udes
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/UdeS-STI/prettier-config-udes.svg)](https://greenkeeper.io/)
 [![npm](https://img.shields.io/npm/v/prettier-config-udes.svg?style=flat-square)](https://www.npmjs.com/package/prettier-config-udes)
+[![Known Vulnerabilities](https://snyk.io/test/github/UdeS-STI/prettier-config-udes/badge.svg)](https://snyk.io/test/github/UdeS-STI/prettier-config-udes)
 
 Prettier shareable config for the UdeS style guide. It can be used to format automatically these files:
 
