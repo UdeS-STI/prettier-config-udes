@@ -17,7 +17,7 @@ Prettier shareable config for the UdeS style guide. It can be used to format aut
 ## Installation
 
 ```bash
-npm install prettier-config-udes
+npm install prettier prettier-config-udes --save-dev
 ```
 
 ## Usage
@@ -28,8 +28,8 @@ Edit `package.json`:
 {
   "prettier": "prettier-config-udes",
   "scripts": {
-    "format:prettier": "prettier --ignore-path .gitignore --write **/*.{css,html,js,json,md,php,scss,yaml,yml}",
-    "lint:prettier": "prettier --ignore-path .gitignore --check **/*.{css,html,js,json,md,php,scss,yaml,yml}"
+    "format:prettier": "prettier --ignore-path .gitignore --write '**/*.{css,html,js,json,md,php,scss,yaml,yml}'",
+    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{css,html,js,json,md,php,scss,yaml,yml}'"
   }
 }
 ```
@@ -53,3 +53,9 @@ npm publish --dry-run
 # For real (are you really sure?)
 npm publish
 ```
+
+## License
+
+The [MIT License][1] (MIT)
+
+[1]: https://opensource.org/licenses/MIT

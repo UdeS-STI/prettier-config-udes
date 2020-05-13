@@ -1,29 +1,7 @@
 {
   "name": "prettier-config-udes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Prettier shareable config for the UdeS style guide",
-  "main": "index.js",
-  "files": [
-    "index.js"
-  ],
-  "scripts": {
-    "format": "npm-run-all format:*",
-    "format:eslint": "eslint --ignore-path .gitignore . --ext js --fix",
-    "format:prettier": "prettier --ignore-path .gitignore --config=index.js --write **/*.{js,json,md}",
-    "lint": "npm-run-all lint:*",
-    "lint:eslint": "eslint --ignore-path .gitignore . --ext js",
-    "lint:prettier": "prettier --ignore-path .gitignore --config=index.js --check **/*.{js,json,md}"
-  },
-  "husky": {
-    "hooks": {
-      "post-commit": "git update-index -g",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/UdeS-STI/prettier-config-udes.git"
-  },
   "keywords": [
     "udes",
     "code",
@@ -35,15 +13,37 @@
     "config",
     "prettier"
   ],
-  "author": "Université de Sherbrooke",
-  "license": "MIT",
+  "homepage": "https://github.com/UdeS-STI/prettier-config-udes",
   "bugs": {
     "url": "https://github.com/UdeS-STI/prettier-config-udes/issues"
   },
-  "homepage": "https://github.com/UdeS-STI/prettier-config-udes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UdeS-STI/prettier-config-udes.git"
+  },
+  "license": "MIT",
+  "author": "Université de Sherbrooke",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "format": "npm-run-all format:*",
+    "format:eslint": "eslint --ignore-path .gitignore . --ext js,json,md --fix",
+    "format:prettier": "prettier --ignore-path .gitignore --config=index.js --write '**/*.{js,json,md}'",
+    "lint": "npm-run-all lint:*",
+    "lint:eslint": "eslint --ignore-path .gitignore . --ext js,json,md",
+    "lint:prettier": "prettier --ignore-path .gitignore --config=index.js --check '**/*.{js,json,md}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index -g"
+    }
+  },
   "dependencies": {
-    "prettier": "^2.0.5",
-    "@prettier/plugin-php": "^0.14.0"
+    "@prettier/plugin-php": "^0.14.0",
+    "prettier": "^2.0.5"
   },
   "devDependencies": {
     "eslint-config-udes": "^0.4.0",
