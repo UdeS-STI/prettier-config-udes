@@ -1,6 +1,6 @@
 {
   "name": "prettier-config-udes",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Prettier shareable config for the UdeS style guide",
   "keywords": [
     "udes",
