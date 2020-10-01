@@ -1,6 +1,6 @@
 {
   "name": "prettier-config-udes",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Prettier shareable config for the UdeS style guide",
   "keywords": [
     "udes",
@@ -25,7 +25,8 @@
   "author": "Université de Sherbrooke",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "php.js"
   ],
   "scripts": {
     "format": "npm-run-all format:*",
@@ -44,18 +45,20 @@
     }
   },
   "dependencies": {
-    "@prettier/plugin-php": "^0.14.3",
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.2"
   },
   "devDependencies": {
-    "eslint-config-udes": "^0.4.1",
+    "eslint-config-udes": "^0.4.2",
     "eslint-plugin-json-format": "^2.0.1",
     "eslint-plugin-markdown": "^1.0.2",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "npm-run-all": "^4.1.5",
-    "snyk": "^1.381.1"
+    "snyk": "^1.406.0"
+  },
+  "peerDependencies": {
+    "@prettier/plugin-php": "^0.14.3"
   },
   "snyk": true
 }

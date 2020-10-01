@@ -28,8 +28,8 @@ Edit `package.json`:
 {
   "prettier": "prettier-config-udes",
   "scripts": {
-    "format:prettier": "prettier --ignore-path .gitignore --write '**/*.{css,html,js,json,md,php,scss,yaml,yml}'",
-    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{css,html,js,json,md,php,scss,yaml,yml}'"
+    "format:prettier": "prettier --ignore-path .gitignore --write '**/*.{css,html,js,json,md,scss,yaml,yml}'",
+    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{css,html,js,json,md,scss,yaml,yml}'"
   }
 }
 ```
@@ -39,6 +39,21 @@ Else, Prettier will output an error:
 
 ```
 [error] No files matching the pattern were found: "**/*.css".
+```
+
+### PHP
+
+If you want to be able to format **PHP** files, you must extends our PHP Prettier configuration by editing your
+package.json:
+
+```json
+{
+  "prettier": "prettier-config-udes/php",
+  "scripts": {
+    "format:prettier": "prettier --ignore-path .gitignore --write '**/*.{css,html,js,json,md,scss,yaml,yml}'",
+    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{css,html,js,json,md,scss,yaml,yml}'"
+  }
+}
 ```
 
 ## Publish
