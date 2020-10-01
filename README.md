@@ -50,8 +50,8 @@ package.json:
 {
   "prettier": "prettier-config-udes/php",
   "scripts": {
-    "format:prettier": "prettier --ignore-path .gitignore --write '**/*.{css,html,js,json,md,scss,yaml,yml}'",
-    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{css,html,js,json,md,scss,yaml,yml}'"
+    "format:prettier": "prettier --ignore-path .gitignore --write '**/*.{css,html,js,json,md,php,scss,yaml,yml}'",
+    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{css,html,js,json,md,php,scss,yaml,yml}'"
   }
 }
 ```
