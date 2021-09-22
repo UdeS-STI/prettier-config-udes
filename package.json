@@ -1,6 +1,6 @@
 {
   "name": "prettier-config-udes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prettier shareable config for the UdeS style guide",
   "keywords": [
     "udes",
@@ -36,7 +36,8 @@
     "lint:eslint": "eslint --ignore-path .gitignore . --ext js,json,md",
     "lint:prettier": "prettier --ignore-path .gitignore --config=index.js --check '**/*.{js,json,md}'",
     "prepublish": "npm run snyk-protect",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "update": "ncu -u && npm i && npm audit fix"
   },
   "husky": {
     "hooks": {
@@ -45,20 +46,17 @@
     }
   },
   "dependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "^2.4.1"
   },
   "devDependencies": {
-    "eslint-config-udes": "^0.4.3",
+    "eslint-config-udes": "^1.1.0",
     "eslint-plugin-json-format": "^2.0.1",
-    "eslint-plugin-markdown": "^1.0.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "husky": "^5.0.9",
-    "lint-staged": "^10.5.4",
+    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "npm-check-updates": "^11.8.5",
     "npm-run-all": "^4.1.5",
-    "snyk": "^1.454.0"
-  },
-  "peerDependencies": {
-    "@prettier/plugin-php": "^0.16.1"
-  },
-  "snyk": true
+    "snyk": "^1.720.0"
+  }
 }
