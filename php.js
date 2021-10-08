@@ -8,7 +8,7 @@ module.exports = {
   ...udesPrettierConfig,
 
   /**
-   * Options from the the PHP plugin
+   * Options from the PHP plugin
    * See https://github.com/prettier/plugin-php
    */
   // Prettier will move open brace for code blocks (classes, functions and methods) onto same line

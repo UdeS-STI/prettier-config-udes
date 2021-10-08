@@ -28,7 +28,7 @@ Edit `package.json`:
 {
   "prettier": "prettier-config-udes",
   "scripts": {
-    "format:prettier": "prettier --ignore-path .gitignore --write '**/*.{css,html,js,json,md,scss,yaml,yml}'",
+    "format:prettier": "npm run lint:prettier -- --write",
     "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{css,html,js,json,md,scss,yaml,yml}'"
   }
 }
@@ -43,7 +43,7 @@ Else, Prettier will output an error:
 
 ### PHP
 
-If you want to be able to format **PHP** files, you must extends our PHP Prettier configuration by editing your
+If you want to be able to format **PHP** files, you must extend our PHP Prettier configuration by editing your
 package.json:
 
 ```json
